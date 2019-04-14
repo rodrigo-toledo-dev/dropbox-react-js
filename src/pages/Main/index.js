@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import api from '../../services/api';
 
 import logo from '../../assets/logo.svg';
-import './styles.css';
+
+import { Container } from './styles';
 
 export default class Main extends Component {
 
@@ -28,13 +29,13 @@ export default class Main extends Component {
 
   render() {
     return(
-      <div id="main-container">
+      <Container>
         <form onSubmit={this.handleSubmit}>
           <img src={logo} alt="" />
           <input placeholder="Criar um box" value={this.state.newBox} onChange={this.handleInputChange} />
           <button type="submit">Criar</button>
         </form>
-      </div>
+      </Container>
     );
   }
 }
